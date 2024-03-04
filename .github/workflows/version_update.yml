@@ -55,7 +55,7 @@ jobs:
       - name: Update Versioning
         id: run-python-script
         run: |
-          git pull
+          git pull origin main
           echo "${{github.event_name}}"
           if [[ "${{ github.event_name }}" == "push" && "${{ startsWith(github.ref, 'refs/tags/') }}" == "true" ]]; then
             echo "This is a tag release."
