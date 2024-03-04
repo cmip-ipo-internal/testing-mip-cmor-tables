@@ -10,6 +10,8 @@ on:
 jobs:
   update_versioning:
     runs-on: ubuntu-latest
+    outputs:
+      steps_completed: ${{ steps.steps_completed.outputs.run-python-script }}
 
     env:
       API_KEY: ${{ secrets.API_KEY }}
